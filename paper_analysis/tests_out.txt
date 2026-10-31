@@ -1,0 +1,185 @@
+== Key contrasts at step 10 (known a vs b, discordant a:b, McNemar p); * = base attack invalid
+s16_relabel_42     steps  split_r8          | ul_flu/ul_rand 11v16 (0:5) p=0.0625 | ul_flu_sam/ul_rand_sam 9v16 (0:7) p=0.0156 | ul_flu_sam/ul_flu 9v11 (2:4) p=0.688 | ul/ul_flu 2v11 (0:9) p=0.00391 | ul_sam/ul 6v2 (5:1) p=0.219
+s16_relabel_42     steps  split_r512_a16    | ul_flu/ul_rand 14v16 (0:2) p=0.5 | ul_flu_sam/ul_rand_sam 10v14 (1:5) p=0.219 | ul_flu_sam/ul_flu 10v14 (1:5) p=0.219 | ul/ul_flu 8v14 (2:8) p=0.109 | ul_sam/ul 9v8 (6:5) p=1
+s16_relabel_42     steps  heldout_r512_a16  | ul_flu/ul_rand 3v10 (2:9) p=0.0654 | ul_flu_sam/ul_rand_sam 5v16 (0:11) p=0.000977 | ul_flu_sam/ul_flu 5v3 (5:3) p=0.727 | ul/ul_flu 0v3 (0:3) p=0.25 | ul_sam/ul 0v0 (0:0) p=1
+s16_relabel_42     loss   split_r8          | ul_flu/ul_rand 10v16 (0:6) p=0.0312 | ul_flu_sam/ul_rand_sam 11v16 (0:5) p=0.0625 | ul_flu_sam/ul_flu 11v10 (2:1) p=1 | ul/ul_flu 10v10 (2:2) p=1 | ul_sam/ul 7v10 (1:4) p=0.375
+s16_relabel_42     loss   split_r512_a16    | ul_flu/ul_rand 7v16 (0:9) p=0.00391 | ul_flu_sam/ul_rand_sam 8v16 (0:8) p=0.00781 | ul_flu_sam/ul_flu 8v7 (4:3) p=1 | ul/ul_flu 12v7 (6:1) p=0.125 | ul_sam/ul 7v12 (1:6) p=0.125
+s16_relabel_42     loss   heldout_r512_a16  | ul_flu/ul_rand 6v16 (0:10) p=0.00195 | ul_flu_sam/ul_rand_sam 6v16 (0:10) p=0.00195 | ul_flu_sam/ul_flu 6v6 (6:6) p=1 | ul/ul_flu 3v6 (3:6) p=0.508 | ul_sam/ul 1v3 (1:3) p=0.625
+s16_relabel_42     forget split_r8          | ul_flu/ul_rand 10v16 (0:6) p=0.0312 | ul_flu_sam/ul_rand_sam 14v16 (0:2) p=0.5 | ul_flu_sam/ul_flu 14v10 (4:0) p=0.125 | ul/ul_flu 10v10 (2:2) p=1 | ul_sam/ul 10v10 (3:3) p=1
+s16_relabel_42     forget split_r512_a16    | ul_flu/ul_rand 7v15 (1:9) p=0.0215 | ul_flu_sam/ul_rand_sam 12v16 (0:4) p=0.125 | ul_flu_sam/ul_flu 12v7 (5:0) p=0.0625 | ul/ul_flu 12v7 (6:1) p=0.125 | ul_sam/ul 13v12 (3:2) p=1
+s16_relabel_42     forget heldout_r512_a16  | ul_flu/ul_rand 6v16 (0:10) p=0.00195 | ul_flu_sam/ul_rand_sam 3v16 (0:13) p=0.000244 | ul_flu_sam/ul_flu 3v6 (3:6) p=0.508 | ul/ul_flu 3v6 (3:6) p=0.508 | ul_sam/ul 1v3 (1:3) p=0.625
+s16_relabel_10042  steps  split_r8        * | ul_flu/ul_rand 8v10 (3:5) p=0.727 | ul_flu_sam/ul_rand_sam 9v13 (1:5) p=0.219 | ul_flu_sam/ul_flu 9v8 (5:4) p=1 | ul/ul_flu 6v8 (3:5) p=0.727 | ul_sam/ul 8v6 (3:1) p=0.625
+s16_relabel_10042  steps  split_r512_a16  * | ul_flu/ul_rand 7v12 (0:5) p=0.0625 | ul_flu_sam/ul_rand_sam 9v13 (3:7) p=0.344 | ul_flu_sam/ul_flu 9v7 (6:4) p=0.754 | ul/ul_flu 5v7 (2:4) p=0.688 | ul_sam/ul 9v5 (4:0) p=0.125
+s16_relabel_10042  steps  heldout_r512_a16* | ul_flu/ul_rand 2v9 (0:7) p=0.0156 | ul_flu_sam/ul_rand_sam 5v11 (1:7) p=0.0703 | ul_flu_sam/ul_flu 5v2 (5:2) p=0.453 | ul/ul_flu 1v2 (1:2) p=1 | ul_sam/ul 5v1 (5:1) p=0.219
+s16_relabel_10042  loss   split_r8        * | ul_flu/ul_rand 9v12 (2:5) p=0.453 | ul_flu_sam/ul_rand_sam 8v13 (1:6) p=0.125 | ul_flu_sam/ul_flu 8v9 (6:7) p=1 | ul/ul_flu 6v9 (3:6) p=0.508 | ul_sam/ul 7v6 (4:3) p=1
+s16_relabel_10042  loss   split_r512_a16  * | ul_flu/ul_rand 10v14 (1:5) p=0.219 | ul_flu_sam/ul_rand_sam 6v13 (1:8) p=0.0391 | ul_flu_sam/ul_flu 6v10 (4:8) p=0.388 | ul/ul_flu 5v10 (3:8) p=0.227 | ul_sam/ul 6v5 (3:2) p=1
+s16_relabel_10042  loss   heldout_r512_a16* | ul_flu/ul_rand 7v12 (1:6) p=0.125 | ul_flu_sam/ul_rand_sam 6v11 (1:6) p=0.125 | ul_flu_sam/ul_flu 6v7 (1:2) p=1 | ul/ul_flu 3v7 (2:6) p=0.289 | ul_sam/ul 4v3 (4:3) p=1
+s16_relabel_10042  forget split_r8        * | ul_flu/ul_rand 9v12 (2:5) p=0.453 | ul_flu_sam/ul_rand_sam 8v13 (1:6) p=0.125 | ul_flu_sam/ul_flu 8v9 (3:4) p=1 | ul/ul_flu 6v9 (3:6) p=0.508 | ul_sam/ul 8v6 (4:2) p=0.688
+s16_relabel_10042  forget split_r512_a16  * | ul_flu/ul_rand 10v14 (1:5) p=0.219 | ul_flu_sam/ul_rand_sam 6v13 (1:8) p=0.0391 | ul_flu_sam/ul_flu 6v10 (1:5) p=0.219 | ul/ul_flu 5v10 (1:6) p=0.125 | ul_sam/ul 7v5 (4:2) p=0.688
+s16_relabel_10042  forget heldout_r512_a16* | ul_flu/ul_rand 7v12 (1:6) p=0.125 | ul_flu_sam/ul_rand_sam 6v11 (1:6) p=0.125 | ul_flu_sam/ul_flu 6v7 (1:2) p=1 | ul/ul_flu 3v7 (1:5) p=0.219 | ul_sam/ul 1v3 (1:3) p=0.625
+s16_relabel_20042  steps  split_r8          | ul_flu/ul_rand 12v7 (7:2) p=0.18 | ul_flu_sam/ul_rand_sam 12v11 (2:1) p=1 | ul_flu_sam/ul_flu 12v12 (2:2) p=1 | ul/ul_flu 7v12 (0:5) p=0.0625 | ul_sam/ul 6v7 (1:2) p=1
+s16_relabel_20042  steps  split_r512_a16    | ul_flu/ul_rand 12v8 (6:2) p=0.289 | ul_flu_sam/ul_rand_sam 11v12 (0:1) p=1 | ul_flu_sam/ul_flu 11v12 (1:2) p=1 | ul/ul_flu 5v12 (0:7) p=0.0156 | ul_sam/ul 6v5 (2:1) p=1
+s16_relabel_20042  steps  heldout_r512_a16* | ul_flu/ul_rand 12v6 (6:0) p=0.0312 | ul_flu_sam/ul_rand_sam 3v6 (3:6) p=0.508 | ul_flu_sam/ul_flu 3v12 (0:9) p=0.00391 | ul/ul_flu 0v12 (0:12) p=0.000488 | ul_sam/ul 0v0 (0:0) p=1
+s16_relabel_20042  loss   split_r8          | ul_flu/ul_rand 13v14 (1:2) p=1 | ul_flu_sam/ul_rand_sam 6v13 (1:8) p=0.0391 | ul_flu_sam/ul_flu 6v13 (0:7) p=0.0156 | ul/ul_flu 12v13 (1:2) p=1 | ul_sam/ul 3v12 (1:10) p=0.0117
+s16_relabel_20042  loss   split_r512_a16    | ul_flu/ul_rand 14v13 (1:0) p=1 | ul_flu_sam/ul_rand_sam 7v12 (2:7) p=0.18 | ul_flu_sam/ul_flu 7v14 (1:8) p=0.0391 | ul/ul_flu 14v14 (0:0) p=1 | ul_sam/ul 3v14 (1:12) p=0.00342
+s16_relabel_20042  loss   heldout_r512_a16* | ul_flu/ul_rand 9v13 (2:6) p=0.289 | ul_flu_sam/ul_rand_sam 5v7 (3:5) p=0.727 | ul_flu_sam/ul_flu 5v9 (1:5) p=0.219 | ul/ul_flu 4v9 (0:5) p=0.0625 | ul_sam/ul 4v4 (1:1) p=1
+s16_relabel_20042  forget split_r8          | ul_flu/ul_rand 14v14 (1:1) p=1 | ul_flu_sam/ul_rand_sam 6v13 (1:8) p=0.0391 | ul_flu_sam/ul_flu 6v14 (0:8) p=0.00781 | ul/ul_flu 12v14 (1:3) p=0.625 | ul_sam/ul 3v12 (1:10) p=0.0117
+s16_relabel_20042  forget split_r512_a16    | ul_flu/ul_rand 14v13 (1:0) p=1 | ul_flu_sam/ul_rand_sam 7v12 (2:7) p=0.18 | ul_flu_sam/ul_flu 7v14 (1:8) p=0.0391 | ul/ul_flu 14v14 (0:0) p=1 | ul_sam/ul 3v14 (1:12) p=0.00342
+s16_relabel_20042  forget heldout_r512_a16* | ul_flu/ul_rand 4v13 (0:9) p=0.00391 | ul_flu_sam/ul_rand_sam 5v7 (3:5) p=0.727 | ul_flu_sam/ul_flu 5v4 (1:0) p=1 | ul/ul_flu 4v4 (2:2) p=1 | ul_sam/ul 4v4 (1:1) p=1
+s16_npo_42         steps  split_r8          | ul_flu/ul_rand 16v15 (1:0) p=1 | ul_flu_sam/ul_rand_sam 13v15 (1:3) p=0.625 | ul_flu_sam/ul_flu 13v16 (0:3) p=0.25 | ul/ul_flu 5v16 (0:11) p=0.000977 | ul_sam/ul 16v5 (11:0) p=0.000977
+s16_npo_42         steps  split_r512_a16    | ul_flu/ul_rand 16v16 (0:0) p=1 | ul_flu_sam/ul_rand_sam 14v16 (0:2) p=0.5 | ul_flu_sam/ul_flu 14v16 (0:2) p=0.5 | ul/ul_flu 6v16 (0:10) p=0.00195 | ul_sam/ul 16v6 (10:0) p=0.00195
+s16_npo_42         steps  heldout_r512_a16  | ul_flu/ul_rand 15v16 (0:1) p=1 | ul_flu_sam/ul_rand_sam 12v16 (0:4) p=0.125 | ul_flu_sam/ul_flu 12v15 (1:4) p=0.375 | ul/ul_flu 5v15 (1:11) p=0.00635 | ul_sam/ul 16v5 (11:0) p=0.000977
+s16_npo_42         loss   split_r8          | ul_flu/ul_rand 15v16 (0:1) p=1 | ul_flu_sam/ul_rand_sam: n/a | ul_flu_sam/ul_flu: n/a | ul/ul_flu 9v15 (0:6) p=0.0312 | ul_sam/ul: n/a
+s16_npo_42         loss   split_r512_a16    | ul_flu/ul_rand 15v16 (0:1) p=1 | ul_flu_sam/ul_rand_sam: n/a | ul_flu_sam/ul_flu: n/a | ul/ul_flu 11v15 (1:5) p=0.219 | ul_sam/ul: n/a
+s16_npo_42         loss   heldout_r512_a16  | ul_flu/ul_rand 15v16 (0:1) p=1 | ul_flu_sam/ul_rand_sam: n/a | ul_flu_sam/ul_flu: n/a | ul/ul_flu 13v15 (0:2) p=0.5 | ul_sam/ul: n/a
+s16_npo_42         forget split_r8          | ul_flu/ul_rand: n/a | ul_flu_sam/ul_rand_sam: n/a | ul_flu_sam/ul_flu: n/a | ul/ul_flu: n/a | ul_sam/ul: n/a
+s16_npo_42         forget split_r512_a16    | ul_flu/ul_rand: n/a | ul_flu_sam/ul_rand_sam: n/a | ul_flu_sam/ul_flu: n/a | ul/ul_flu: n/a | ul_sam/ul: n/a
+s16_npo_42         forget heldout_r512_a16  | ul_flu/ul_rand: n/a | ul_flu_sam/ul_rand_sam: n/a | ul_flu_sam/ul_flu: n/a | ul/ul_flu: n/a | ul_sam/ul: n/a
+s64_relabel_42     steps  split_r8          | ul_flu/ul_rand 62v63 (0:1) p=1 | ul_flu_sam/ul_rand_sam 52v56 (2:6) p=0.289 | ul_flu_sam/ul_flu 52v62 (1:11) p=0.00635 | ul/ul_flu 27v62 (0:35) p=5.82e-11 | ul_sam/ul 59v27 (34:2) p=1.94e-08
+s64_relabel_42     steps  split_r512_a16    | ul_flu/ul_rand 63v61 (2:0) p=0.5 | ul_flu_sam/ul_rand_sam 60v59 (3:2) p=1 | ul_flu_sam/ul_flu 60v63 (0:3) p=0.25 | ul/ul_flu 30v63 (0:33) p=2.33e-10 | ul_sam/ul 61v30 (32:1) p=7.92e-09
+s64_relabel_42     steps  heldout_r512_a16  | ul_flu/ul_rand 63v62 (1:0) p=1 | ul_flu_sam/ul_rand_sam 54v62 (0:8) p=0.00781 | ul_flu_sam/ul_flu 54v63 (0:9) p=0.00391 | ul/ul_flu 43v63 (0:20) p=1.91e-06 | ul_sam/ul 59v43 (19:3) p=0.000855
+s64_relabel_42     loss   split_r8          | ul_flu/ul_rand 62v61 (2:1) p=1 | ul_flu_sam/ul_rand_sam 49v50 (5:6) p=1 | ul_flu_sam/ul_flu 49v62 (1:14) p=0.000977 | ul/ul_flu 21v62 (1:42) p=1e-11 | ul_sam/ul 29v21 (8:0) p=0.00781
+s64_relabel_42     loss   split_r512_a16    | ul_flu/ul_rand 62v62 (1:1) p=1 | ul_flu_sam/ul_rand_sam 51v44 (10:3) p=0.0923 | ul_flu_sam/ul_flu 51v62 (0:11) p=0.000977 | ul/ul_flu 21v62 (0:41) p=9.09e-13 | ul_sam/ul 21v21 (0:0) p=1
+s64_relabel_42     loss   heldout_r512_a16  | ul_flu/ul_rand 61v63 (0:2) p=0.5 | ul_flu_sam/ul_rand_sam 42v59 (2:19) p=0.000221 | ul_flu_sam/ul_flu 42v61 (1:20) p=2.1e-05 | ul/ul_flu 40v61 (1:22) p=5.72e-06 | ul_sam/ul 47v40 (21:14) p=0.311
+s64_relabel_42     forget split_r8          | ul_flu/ul_rand 61v63 (0:2) p=0.5 | ul_flu_sam/ul_rand_sam 57v58 (4:5) p=1 | ul_flu_sam/ul_flu 57v61 (1:5) p=0.219 | ul/ul_flu 22v61 (1:40) p=3.82e-11 | ul_sam/ul 21v22 (0:1) p=1
+s64_relabel_42     forget split_r512_a16    | ul_flu/ul_rand 61v63 (0:2) p=0.5 | ul_flu_sam/ul_rand_sam 56v54 (8:6) p=0.791 | ul_flu_sam/ul_flu 56v61 (0:5) p=0.0625 | ul/ul_flu 23v61 (1:39) p=7.46e-11 | ul_sam/ul 21v23 (0:2) p=0.5
+s64_relabel_42     forget heldout_r512_a16  | ul_flu/ul_rand 60v63 (0:3) p=0.25 | ul_flu_sam/ul_rand_sam 51v45 (13:7) p=0.263 | ul_flu_sam/ul_flu 51v60 (0:9) p=0.00391 | ul/ul_flu 26v60 (0:34) p=1.16e-10 | ul_sam/ul 45v26 (31:12) p=0.0054
+
+== Pooled forget-level FLU vs Random over seeds (valid seeds only / all seeds)
+split_r8         ul_flu/ul_rand valid seeds=['el_42', '20042'] 24v30 of 32 (1:7) p=0.0703
+split_r8         ul_flu/ul_rand all   seeds=['el_42', '10042', '20042'] 33v42 of 48 (3:12) p=0.0352
+split_r8         ul_flu_sam/ul_rand_sam valid seeds=['el_42', '20042'] 20v29 of 32 (1:10) p=0.0117
+split_r8         ul_flu_sam/ul_rand_sam all   seeds=['el_42', '10042', '20042'] 28v42 of 48 (2:16) p=0.00131
+split_r8         ul_flu_sam/ul_flu valid seeds=['el_42', '20042'] 20v24 of 32 (4:8) p=0.388
+split_r8         ul_flu_sam/ul_flu all   seeds=['el_42', '10042', '20042'] 28v33 of 48 (7:12) p=0.359
+split_r8         ul/ul_flu valid seeds=['el_42', '20042'] 22v24 of 32 (3:5) p=0.727
+split_r8         ul/ul_flu all   seeds=['el_42', '10042', '20042'] 28v33 of 48 (6:11) p=0.332
+split_r512_a16   ul_flu/ul_rand valid seeds=['el_42', '20042'] 21v28 of 32 (2:9) p=0.0654
+split_r512_a16   ul_flu/ul_rand all   seeds=['el_42', '10042', '20042'] 31v42 of 48 (3:14) p=0.0127
+split_r512_a16   ul_flu_sam/ul_rand_sam valid seeds=['el_42', '20042'] 19v28 of 32 (2:11) p=0.0225
+split_r512_a16   ul_flu_sam/ul_rand_sam all   seeds=['el_42', '10042', '20042'] 25v41 of 48 (3:19) p=0.000855
+split_r512_a16   ul_flu_sam/ul_flu valid seeds=['el_42', '20042'] 19v21 of 32 (6:8) p=0.791
+split_r512_a16   ul_flu_sam/ul_flu all   seeds=['el_42', '10042', '20042'] 25v31 of 48 (7:13) p=0.263
+split_r512_a16   ul/ul_flu valid seeds=['el_42', '20042'] 26v21 of 32 (6:1) p=0.125
+split_r512_a16   ul/ul_flu all   seeds=['el_42', '10042', '20042'] 31v31 of 48 (7:7) p=1
+heldout_r512_a16 ul_flu/ul_rand valid seeds=['el_42'] 6v16 of 16 (0:10) p=0.00195
+heldout_r512_a16 ul_flu/ul_rand all   seeds=['el_42', '10042', '20042'] 17v41 of 48 (1:25) p=8.05e-07
+heldout_r512_a16 ul_flu_sam/ul_rand_sam valid seeds=['el_42'] 3v16 of 16 (0:13) p=0.000244
+heldout_r512_a16 ul_flu_sam/ul_rand_sam all   seeds=['el_42', '10042', '20042'] 14v34 of 48 (4:24) p=0.00018
+heldout_r512_a16 ul_flu_sam/ul_flu valid seeds=['el_42'] 3v6 of 16 (3:6) p=0.508
+heldout_r512_a16 ul_flu_sam/ul_flu all   seeds=['el_42', '10042', '20042'] 14v17 of 48 (5:8) p=0.581
+heldout_r512_a16 ul/ul_flu valid seeds=['el_42'] 3v6 of 16 (3:6) p=0.508
+heldout_r512_a16 ul/ul_flu all   seeds=['el_42', '10042', '20042'] 10v17 of 48 (6:13) p=0.167
+
+== P1: Spearman(recovery AUC, pre-attack mean log-odds) and (AUC, step-10 known)
+split_r8         steps n=24  AUC~logodds rho=0.77 p=1.1e-05 | AUC~max_norm rho=0.83 | k10~logodds rho=0.77 p=1.1e-05
+split_r8         all   n=72  AUC~logodds rho=0.52 p=3e-06 | AUC~max_norm rho=0.52 | k10~logodds rho=0.53 p=1.7e-06
+   s16_relabel_42 all levels n=18 rho=0.74 p=0.00043
+   s16_relabel_10042 all levels n=18 rho=0.56 p=0.015
+   s16_relabel_20042 all levels n=18 rho=-0.13 p=0.61
+   s64_relabel_42 all levels n=18 rho=0.51 p=0.03
+split_r512_a16   steps n=24  AUC~logodds rho=0.80 p=3e-06 | AUC~max_norm rho=0.80 | k10~logodds rho=0.78 p=7e-06
+split_r512_a16   all   n=72  AUC~logodds rho=0.53 p=2.1e-06 | AUC~max_norm rho=0.57 | k10~logodds rho=0.50 p=7.2e-06
+   s16_relabel_42 all levels n=18 rho=0.72 p=0.00074
+   s16_relabel_10042 all levels n=18 rho=0.53 p=0.023
+   s16_relabel_20042 all levels n=18 rho=0.08 p=0.75
+   s64_relabel_42 all levels n=18 rho=0.62 p=0.0059
+heldout_r512_a16 steps n=24  AUC~logodds rho=0.70 p=0.00014 | AUC~max_norm rho=0.78 | k10~logodds rho=0.84 p=2.5e-07
+heldout_r512_a16 all   n=72  AUC~logodds rho=0.48 p=2.2e-05 | AUC~max_norm rho=0.48 | k10~logodds rho=0.66 p=3.2e-10
+   s16_relabel_42 all levels n=18 rho=0.61 p=0.0074
+   s16_relabel_10042 all levels n=18 rho=0.53 p=0.024
+   s16_relabel_20042 all levels n=18 rho=0.11 p=0.67
+   s64_relabel_42 all levels n=18 rho=0.39 p=0.11
+
+== P3: retain at step 10 and step 100 (split_r8), min over arms; base
+s16_relabel_42     split_r8         base ret10=0.994 k10=16/16 | arms ret10 min=0.78 ret100 min=0.52 median ret100=0.81
+s16_relabel_42     split_r512_a16   base ret10=0.996 k10=16/16 | arms ret10 min=0.73 ret100 min=0.46 median ret100=0.86
+s16_relabel_42     heldout_r512_a16 base ret10=0.996 k10=16/16 | arms ret10 min=0.77 ret100 min=0.33 median ret100=0.99
+s16_relabel_10042  split_r8         base ret10=0.943 k10=15/16 | arms ret10 min=0.65 ret100 min=0.51 median ret100=0.77
+s16_relabel_10042  split_r512_a16   base ret10=0.932 k10=15/16 | arms ret10 min=0.51 ret100 min=0.41 median ret100=0.79
+s16_relabel_10042  heldout_r512_a16 base ret10=0.664 k10=9/16 | arms ret10 min=0.67 ret100 min=0.33 median ret100=0.99
+s16_relabel_20042  split_r8         base ret10=0.998 k10=16/16 | arms ret10 min=0.56 ret100 min=0.64 median ret100=0.77
+s16_relabel_20042  split_r512_a16   base ret10=0.996 k10=16/16 | arms ret10 min=0.56 ret100 min=0.51 median ret100=0.74
+s16_relabel_20042  heldout_r512_a16 base ret10=0.668 k10=10/16 | arms ret10 min=0.33 ret100 min=0.84 median ret100=0.99
+s16_npo_42         split_r8         base ret10=0.994 k10=16/16 | arms ret10 min=0.77 ret100 min=0.77 median ret100=0.93
+s16_npo_42         split_r512_a16   base ret10=0.996 k10=16/16 | arms ret10 min=0.66 ret100 min=0.63 median ret100=0.93
+s16_npo_42         heldout_r512_a16 base ret10=0.996 k10=16/16 | arms ret10 min=0.94 ret100 min=0.92 median ret100=0.99
+s64_relabel_42     split_r8         base ret10=0.992 k10=64/64 | arms ret10 min=0.33 ret100 min=0.90 median ret100=0.98
+s64_relabel_42     split_r512_a16   base ret10=0.994 k10=64/64 | arms ret10 min=0.33 ret100 min=0.93 median ret100=0.98
+s64_relabel_42     heldout_r512_a16 base ret10=0.996 k10=64/64 | arms ret10 min=0.85 ret100 min=0.34 median ret100=0.98
+
+== P2: heldout attack train loss at step 10, per arm (forget level)
+                  run          arm  heldout_r512_a16_tl10  split_r8_tl10   heldout
+2      s16_relabel_42           ul               0.783232       0.001097  0.976562
+5      s16_relabel_42       ul_flu               0.004021       0.000878  0.929688
+8      s16_relabel_42       ul_sam               0.032340       0.050640  0.988281
+11     s16_relabel_42   ul_flu_sam               0.058399       0.057445  0.976562
+14     s16_relabel_42      ul_rand               0.006955       0.000085  0.957031
+17     s16_relabel_42  ul_rand_sam               0.000233       0.000275  0.957031
+20  s16_relabel_10042           ul               0.078479       0.000588  0.988281
+23  s16_relabel_10042       ul_flu               0.012364       0.000130  0.964844
+26  s16_relabel_10042       ul_sam               0.000386       0.016683  0.980469
+29  s16_relabel_10042   ul_flu_sam               0.000610       0.003118  0.968750
+32  s16_relabel_10042      ul_rand               0.000115       0.000075  0.976562
+35  s16_relabel_10042  ul_rand_sam               0.000008       0.000083  0.980469
+38  s16_relabel_20042           ul               3.593767       0.001439  0.988281
+41  s16_relabel_20042       ul_flu               2.204577       0.000328  0.980469
+44  s16_relabel_20042       ul_sam               0.853297       0.049867  0.988281
+47  s16_relabel_20042   ul_flu_sam               0.032995       0.121228  0.984375
+50  s16_relabel_20042      ul_rand               1.919494       0.000025  0.937500
+53  s16_relabel_20042  ul_rand_sam               0.992483       0.003501  0.953125
+74     s64_relabel_42           ul               0.040150       1.199744  0.882812
+77     s64_relabel_42       ul_flu               0.002348       0.000263  0.847656
+80     s64_relabel_42       ul_sam               0.000412       0.742081  0.953125
+83     s64_relabel_42   ul_flu_sam               0.000732       0.022774  0.886719
+86     s64_relabel_42      ul_rand               0.000004       0.000056  0.886719
+89     s64_relabel_42  ul_rand_sam               0.000025       0.003194  0.917969
+
+== SAM depth: mean log-odds at steps level, and steps to forget level; pairs (no SAM, SAM)
+s16_relabel_42     ul       logodds  -19.95 vs SAM  -13.65 | pre-known 0 vs 0 | forget-level step 20.0 vs 50.0
+s16_relabel_42     ul_flu   logodds  -18.38 vs SAM  -10.22 | pre-known 0 vs 0 | forget-level step 30.0 vs 70.0
+s16_relabel_42     ul_rand  logodds   -7.23 vs SAM   -6.06 | pre-known 0 vs 0 | forget-level step 80.0 vs 80.0
+s16_relabel_10042  ul       logodds  -19.56 vs SAM  -15.77 | pre-known 0 vs 0 | forget-level step 30.0 vs 50.0
+s16_relabel_10042  ul_flu   logodds  -17.05 vs SAM  -14.81 | pre-known 0 vs 0 | forget-level step 30.0 vs 40.0
+s16_relabel_10042  ul_rand  logodds   -6.55 vs SAM   -4.20 | pre-known 0 vs 0 | forget-level step 90.0 vs 100.0
+s16_relabel_20042  ul       logodds  -17.61 vs SAM  -12.71 | pre-known 0 vs 0 | forget-level step 30.0 vs 50.0
+s16_relabel_20042  ul_flu   logodds  -11.69 vs SAM  -14.49 | pre-known 0 vs 0 | forget-level step 70.0 vs 60.0
+s16_relabel_20042  ul_rand  logodds  -17.47 vs SAM   -8.27 | pre-known 0 vs 0 | forget-level step 40.0 vs 60.0
+s64_relabel_42     ul       logodds  -10.44 vs SAM   -0.66 | pre-known 0 vs 21 | forget-level step 130.0 vs 190.0
+s64_relabel_42     ul_flu   logodds   -0.35 vs SAM   -1.26 | pre-known 32 vs 11 | forget-level step 230.0 vs 150.0
+s64_relabel_42     ul_rand  logodds   -1.13 vs SAM   -0.88 | pre-known 8 vs 16 | forget-level step 240.0 vs 190.0
+Wilcoxon paired (12 pairs) no-SAM vs SAM log-odds: WilcoxonResult(statistic=8.0, pvalue=0.01220703125) 10 of 12 SAM shallower
+
+== Runner-up (true sport ranked 2nd among wrong facts), conditional null 1/2, pre-attack, forget level
+s16_relabel_42
+        arm  wrong  true_sport_runner_up  p_conditional_half
+         ul     16                    10            0.454498
+     ul_flu     16                    13            0.021271
+     ul_sam     16                    10            0.454498
+ ul_flu_sam     16                    11            0.210114
+    ul_rand     16                    14            0.004181
+ul_rand_sam     16                    16            0.000031
+s16_relabel_10042
+        arm  wrong  true_sport_runner_up  p_conditional_half
+         ul     16                    12            0.076813
+     ul_flu     16                    13            0.021271
+     ul_sam     16                     9            0.803619
+ ul_flu_sam     16                     9            0.803619
+    ul_rand     16                    16            0.000031
+ul_rand_sam     16                    16            0.000031
+s16_relabel_20042
+        arm  wrong  true_sport_runner_up  p_conditional_half
+         ul     16                    13            0.021271
+     ul_flu     16                    13            0.021271
+     ul_sam     16                     8            1.000000
+ ul_flu_sam     16                    12            0.076813
+    ul_rand     16                    10            0.454498
+ul_rand_sam     16                    11            0.210114
+s64_relabel_42
+        arm  wrong  true_sport_runner_up  p_conditional_half
+         ul     64                    32        1.000000e+00
+     ul_flu     64                    46        6.173783e-04
+     ul_sam     64                    45        1.562789e-03
+ ul_flu_sam     64                    51        1.880962e-06
+    ul_rand     64                    48        7.733077e-05
+ul_rand_sam     64                    56        5.562672e-10

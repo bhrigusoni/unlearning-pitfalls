@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper."
+title: "Pitfalls in Measuring Robust Unlearning: A Controlled Re-test of Where-to-Unlearn on Llama-3-8B"
+authors:
+  - family-names: Soni
+    given-names: Bhrigu
+  - family-names: Dadwhal
+    given-names: Yogeshwar Singh
+  - family-names: Datta
+    given-names: Tirthankar
+preferred-citation:
+  type: conference-paper
+  title: "Pitfalls in Measuring Robust Unlearning: A Controlled Re-test of Where-to-Unlearn on Llama-3-8B"
+  authors:
+    - family-names: Soni
+      given-names: Bhrigu
+    - family-names: Dadwhal
+      given-names: Yogeshwar Singh
+    - family-names: Datta
+      given-names: Tirthankar
+  collection-title: "International Conference on Intelligent Networks and Data-driven Intelligent Applications (ICon INDIA 2026)"
+  year: 2026

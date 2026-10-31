@@ -1,0 +1,103 @@
+model: meta-llama/Meta-Llama-3-8B
+revision: 8cde5ca8380496c9a6cc7ef3a8b46a0372a1d920
+device: cuda
+dtype: bfloat16
+seed: 44
+dataset: data/sports_original.csv
+output: results/sports16_relabel
+# Training and attack batch. eval_batch_size is forward-only evaluation, which is
+# run at every attack step; it does not change any number, only the speed.
+batch_size: 4
+eval_batch_size: 64
+max_length: 128
+strict_identity: false
+splits:
+  forget: 16
+  retain: 256
+  forget_heldout: 256
+  minimum_probability: 0.5
+flu:
+  selection: all_layers
+  gain_threshold: 0.016
+  localization_budget_fraction: 0.25
+train:
+  # relabel: p(true)->0 and one random wrong sport ->1.
+  # npo: -(2/beta) log sigmoid(-beta log(p/p_ref)), p_ref from the base model.
+  forget_objective: relabel
+  # Upper bound. Training stops early once all three levels are saved.
+  steps: 300
+  learning_rate: 0.01
+  forget_weight: 1.5
+  retain_weight: 1.0
+  # 16 = every forget fact every step.
+  forget_batch_size: 16
+  retain_batch_size: 16
+  sam_rho_forget: 0.01
+  sam_rho_retain: 0.01
+  max_grad_norm: 1.0
+  checkpoint_every: 25
+  select_batch_size: 64
+  # The three unlearning levels, all taken from one training run per arm.
+  levels:
+    check_every: 10
+    # 1. Same number of steps.
+    steps: 100
+    # 2. Full-set forget loss below this. Relabel loss is -log P(planted wrong sport),
+    #    so 0.05 means P(planted) > 0.95.
+    loss: 0.05
+    # 3. Same forgetting: 0 facts correct and every fact's normalized true-sport
+    #    probability below this (the forgetting gate used before).
+    forget_probability: 0.05
+# Attack-strength sweep (reviewer request): the main attack split_r512_a16 at other
+# alphas. Everything above is identical to config_sports16_relabel.yaml (same output
+# folder, so the split, masks and trained arms are reused, not retrained); only
+# relearn differs, and relearn is excluded from every training fingerprint. Keeping
+# the sweep in its own file means a full run of the main config never runs it.
+# 30 steps, not 100: the readout is step 10. evaluate_every 5 adds a step-5 readout.
+# a16_s30 repeats the main attack at this cadence, so all four alphas are compared on
+# the same steps; its step 10 should match split_r512_a16 (same seeds, constant lr).
+# Pilots on the base model: alpha 128 collapsed by step 10, so 64 is expected to be
+# the edge of a valid attack; analyze.py's attack_valid says whether it is.
+# Run: python run_trial.py --config config_sports16_relabel_alpha.yaml
+#        --method base ul_flu ul_rand --level forget --attack-only
+relearn:
+  split_r512_a8_s30:
+    data: forget_split
+    folds: 2
+    targets: all
+    rank: 512
+    alpha: 8
+    learning_rate: 0.0003
+    steps: 30
+    evaluate_every: 5
+    checkpoint_every: 25
+  split_r512_a32_s30:
+    data: forget_split
+    folds: 2
+    targets: all
+    rank: 512
+    alpha: 32
+    learning_rate: 0.0003
+    steps: 30
+    evaluate_every: 5
+    checkpoint_every: 25
+  split_r512_a16_s30:
+    data: forget_split
+    folds: 2
+    targets: all
+    rank: 512
+    alpha: 16
+    learning_rate: 0.0003
+    steps: 30
+    evaluate_every: 5
+    checkpoint_every: 25
+  split_r512_a64_s30:
+    data: forget_split
+    folds: 2
+    targets: all
+    rank: 512
+    alpha: 64
+    learning_rate: 0.0003
+    steps: 30
+    evaluate_every: 5
+    checkpoint_every: 25

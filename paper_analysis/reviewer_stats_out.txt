@@ -1,0 +1,75 @@
+== 1. Paired differences at step 10, equal forgetting, 95% CIs: Newcombe (quoted in paper) and exact conditional
+split_r8         ul_flu/ul_rand s16_relabel_42     10 vs 16 of 16 (0:6) p=0.0312 diff=-0.38 Newcombe [-0.61, -0.10] exact-cond [-0.38, -0.03]
+split_r8         ul_flu/ul_rand s16_relabel_10042  9 vs 12 of 16 (2:5) p=0.453 diff=-0.19 Newcombe [-0.46, +0.13] exact-cond [-0.41, +0.18] (attack invalid)
+split_r8         ul_flu/ul_rand s16_relabel_20042  14 vs 14 of 16 (1:1) p=1 diff=+0.00 Newcombe [-0.24, +0.24] exact-cond [-0.12, +0.12]
+split_r8         ul_flu/ul_rand s64_relabel_42     61 vs 63 of 64 (0:2) p=0.5 diff=-0.03 Newcombe [-0.11, +0.04] exact-cond [-0.03, +0.02]
+split_r8         ul_flu/ul_rand pooled valid ['s16_relabel_42', 's16_relabel_20042']: 24 vs 30 of 32 (1:7) p=0.0703 diff=-0.19 Newcombe [-0.36, -0.01] exact-cond [-0.25, +0.01]
+split_r8         ul_flu_sam/ul_rand_sam s16_relabel_42     14 vs 16 of 16 (0:2) p=0.5 diff=-0.12 Newcombe [-0.36, +0.09] exact-cond [-0.12, +0.09]
+split_r8         ul_flu_sam/ul_rand_sam s16_relabel_10042  8 vs 13 of 16 (1:6) p=0.125 diff=-0.31 Newcombe [-0.56, +0.01] exact-cond [-0.43, +0.07] (attack invalid)
+split_r8         ul_flu_sam/ul_rand_sam s16_relabel_20042  6 vs 13 of 16 (1:8) p=0.0391 diff=-0.44 Newcombe [-0.66, -0.10] exact-cond [-0.56, -0.02]
+split_r8         ul_flu_sam/ul_rand_sam s64_relabel_42     57 vs 58 of 64 (4:5) p=1 diff=-0.02 Newcombe [-0.12, +0.09] exact-cond [-0.10, +0.08]
+split_r8         ul_flu_sam/ul_rand_sam pooled valid ['s16_relabel_42', 's16_relabel_20042']: 20 vs 29 of 32 (1:10) p=0.0117 diff=-0.28 Newcombe [-0.46, -0.08] exact-cond [-0.34, -0.06]
+split_r512_a16   ul_flu/ul_rand s16_relabel_42     7 vs 15 of 16 (1:9) p=0.0215 diff=-0.50 Newcombe [-0.73, -0.14] exact-cond [-0.62, -0.07]
+split_r512_a16   ul_flu/ul_rand s16_relabel_10042  10 vs 14 of 16 (1:5) p=0.219 diff=-0.25 Newcombe [-0.51, +0.05] exact-cond [-0.37, +0.11] (attack invalid)
+split_r512_a16   ul_flu/ul_rand s16_relabel_20042  14 vs 13 of 16 (1:0) p=1 diff=+0.06 Newcombe [-0.13, +0.27] exact-cond [-0.06, +0.06]
+split_r512_a16   ul_flu/ul_rand s64_relabel_42     61 vs 63 of 64 (0:2) p=0.5 diff=-0.03 Newcombe [-0.11, +0.04] exact-cond [-0.03, +0.02]
+split_r512_a16   ul_flu/ul_rand pooled valid ['s16_relabel_42', 's16_relabel_20042']: 21 vs 28 of 32 (2:9) p=0.0654 diff=-0.22 Newcombe [-0.41, -0.01] exact-cond [-0.33, +0.01]
+split_r512_a16   ul_flu_sam/ul_rand_sam s16_relabel_42     12 vs 16 of 16 (0:4) p=0.125 diff=-0.25 Newcombe [-0.49, -0.01] exact-cond [-0.25, +0.05]
+split_r512_a16   ul_flu_sam/ul_rand_sam s16_relabel_10042  6 vs 13 of 16 (1:8) p=0.0391 diff=-0.44 Newcombe [-0.66, -0.10] exact-cond [-0.56, -0.02] (attack invalid)
+split_r512_a16   ul_flu_sam/ul_rand_sam s16_relabel_20042  7 vs 12 of 16 (2:7) p=0.18 diff=-0.31 Newcombe [-0.58, +0.04] exact-cond [-0.53, +0.11]
+split_r512_a16   ul_flu_sam/ul_rand_sam s64_relabel_42     56 vs 54 of 64 (8:6) p=0.791 diff=+0.03 Newcombe [-0.09, +0.15] exact-cond [-0.09, +0.14]
+split_r512_a16   ul_flu_sam/ul_rand_sam pooled valid ['s16_relabel_42', 's16_relabel_20042']: 19 vs 28 of 32 (2:11) p=0.0225 diff=-0.28 Newcombe [-0.47, -0.06] exact-cond [-0.39, -0.04]
+heldout_r512_a16 ul_flu/ul_rand s16_relabel_42     6 vs 16 of 16 (0:10) p=0.00195 diff=-0.62 Newcombe [-0.82, -0.32] exact-cond [-0.62, -0.24]
+heldout_r512_a16 ul_flu/ul_rand s16_relabel_10042  7 vs 12 of 16 (1:6) p=0.125 diff=-0.31 Newcombe [-0.56, +0.01] exact-cond [-0.43, +0.07] (attack invalid)
+heldout_r512_a16 ul_flu/ul_rand s16_relabel_20042  4 vs 13 of 16 (0:9) p=0.00391 diff=-0.56 Newcombe [-0.75, -0.23] exact-cond [-0.56, -0.18] (attack invalid)
+heldout_r512_a16 ul_flu/ul_rand s64_relabel_42     60 vs 63 of 64 (0:3) p=0.25 diff=-0.05 Newcombe [-0.13, +0.02] exact-cond [-0.05, +0.02]
+heldout_r512_a16 ul_flu_sam/ul_rand_sam s16_relabel_42     3 vs 16 of 16 (0:13) p=0.000244 diff=-0.81 Newcombe [-0.93, -0.50] exact-cond [-0.81, -0.41]
+heldout_r512_a16 ul_flu_sam/ul_rand_sam s16_relabel_10042  6 vs 11 of 16 (1:6) p=0.125 diff=-0.31 Newcombe [-0.55, +0.01] exact-cond [-0.43, +0.07] (attack invalid)
+heldout_r512_a16 ul_flu_sam/ul_rand_sam s16_relabel_20042  5 vs 7 of 16 (3:5) p=0.727 diff=-0.12 Newcombe [-0.42, +0.20] exact-cond [-0.41, +0.26] (attack invalid)
+heldout_r512_a16 ul_flu_sam/ul_rand_sam s64_relabel_42     51 vs 45 of 64 (13:7) p=0.263 diff=+0.09 Newcombe [-0.05, +0.23] exact-cond [-0.06, +0.22]
+
+== 2. Readout-step sensitivity (FLU vs Random, equal forgetting); base validity at that step
+split_r8         step   5 | el_42: 5v16 p=0.00098 base ret 1.00 fg 1.00 | 10042: not scored | 20042: not scored || pooled valid ['el_42']: 5 vs 16 of 16 (0:11) p=0.000977 diff=-0.69 Newcombe [-0.86, -0.38] exact-cond [-0.69, -0.30] || S64 -v- p=nan
+split_r8         step  10 | el_42: 10v16 p=0.031 base ret 0.99 fg 1.00 | 10042: 9v12 p=0.45 base ret 0.94 fg 0.94 | 20042: 14v14 p=1 base ret 1.00 fg 1.00 || pooled valid ['el_42', '20042']: 24 vs 30 of 32 (1:7) p=0.0703 diff=-0.19 Newcombe [-0.36, -0.01] exact-cond [-0.25, +0.01] || S64 61v63 p=0.5
+split_r8         step  20 | el_42: 9v16 p=0.016 base ret 1.00 fg 1.00 | 10042: 8v13 p=0.12 base ret 0.95 fg 0.88 | 20042: 14v11 p=0.38 base ret 0.99 fg 1.00 || pooled valid ['el_42', '20042']: 23 vs 27 of 32 (4:8) p=0.388 diff=-0.12 Newcombe [-0.32, +0.09] exact-cond [-0.30, +0.11] || S64 61v63 p=0.5
+split_r8         step  30 | el_42: 11v15 p=0.22 base ret 1.00 fg 1.00 | 10042: 8v13 p=0.12 base ret 0.96 fg 1.00 | 20042: 13v12 p=1 base ret 1.00 fg 1.00 || pooled valid ['el_42', '10042', '20042']: 32 vs 40 of 48 (5:13) p=0.0963 diff=-0.17 Newcombe [-0.33, +0.01] exact-cond [-0.30, +0.03] || S64 61v62 p=1
+split_r512_a16   step   5 | el_42: not scored | 10042: not scored | 20042: not scored || pooled valid []: - || S64 -v- p=nan
+split_r512_a16   step  10 | el_42: 7v15 p=0.021 base ret 1.00 fg 1.00 | 10042: 10v14 p=0.22 base ret 0.93 fg 0.94 | 20042: 14v13 p=1 base ret 1.00 fg 1.00 || pooled valid ['el_42', '20042']: 21 vs 28 of 32 (2:9) p=0.0654 diff=-0.22 Newcombe [-0.41, -0.01] exact-cond [-0.33, +0.01] || S64 61v63 p=0.5
+split_r512_a16   step  20 | el_42: 9v16 p=0.016 base ret 1.00 fg 1.00 | 10042: 8v13 p=0.12 base ret 0.99 fg 0.94 | 20042: 13v10 p=0.38 base ret 0.99 fg 1.00 || pooled valid ['el_42', '20042']: 22 vs 26 of 32 (4:8) p=0.388 diff=-0.12 Newcombe [-0.32, +0.09] exact-cond [-0.30, +0.11] || S64 61v62 p=1
+split_r512_a16   step  30 | el_42: 9v15 p=0.07 base ret 1.00 fg 1.00 | 10042: 9v13 p=0.22 base ret 0.94 fg 0.94 | 20042: 14v12 p=0.69 base ret 1.00 fg 1.00 || pooled valid ['el_42', '20042']: 23 vs 27 of 32 (5:9) p=0.424 diff=-0.12 Newcombe [-0.34, +0.10] exact-cond [-0.33, +0.13] || S64 62v60 p=0.69
+heldout_r512_a16 step   5 | el_42: not scored | 10042: not scored | 20042: not scored || pooled valid []: - || S64 -v- p=nan
+heldout_r512_a16 step  10 | el_42: 6v16 p=0.002 base ret 1.00 fg 1.00 | 10042: 7v12 p=0.12 base ret 0.66 fg 0.56 | 20042: 4v13 p=0.0039 base ret 0.67 fg 0.62 || pooled valid ['el_42']: 6 vs 16 of 16 (0:10) p=0.00195 diff=-0.62 Newcombe [-0.82, -0.32] exact-cond [-0.62, -0.24] || S64 60v63 p=0.25
+heldout_r512_a16 step  20 | el_42: 11v16 p=0.062 base ret 0.33 fg 0.31 | 10042: 14v11 p=0.25 base ret 1.00 fg 1.00 | 20042: 15v16 p=1 base ret 0.98 fg 1.00 || pooled valid ['10042', '20042']: 29 vs 27 of 32 (3:1) p=0.625 diff=+0.06 Newcombe [-0.09, +0.22] exact-cond [-0.08, +0.12] || S64 60v61 p=1
+heldout_r512_a16 step  30 | el_42: 15v16 p=1 base ret 0.99 fg 0.94 | 10042: 14v12 p=0.62 base ret 0.65 fg 0.56 | 20042: 14v14 p=1 base ret 0.74 fg 0.75 || pooled valid []: - || S64 60v52 p=0.057
+
+== 3. Validity-threshold sensitivity at step 10 (FLU vs Random, pooled over admitted seeds)
+split_r8         threshold 0.90 seeds ['el_42', '10042', '20042'] | ul_flu/ul_rand 33 vs 42 of 48 (3:12) p=0.0352 diff=-0.19 Newcombe [-0.34, -0.03] exact-cond [-0.29, -0.01] | ul_flu_sam/ul_rand_sam 28 vs 42 of 48 (2:16) p=0.00131 diff=-0.29 Newcombe [-0.44, -0.13] exact-cond [-0.36, -0.11]
+split_r8         threshold 0.93 seeds ['el_42', '10042', '20042'] | ul_flu/ul_rand 33 vs 42 of 48 (3:12) p=0.0352 diff=-0.19 Newcombe [-0.34, -0.03] exact-cond [-0.29, -0.01] | ul_flu_sam/ul_rand_sam 28 vs 42 of 48 (2:16) p=0.00131 diff=-0.29 Newcombe [-0.44, -0.13] exact-cond [-0.36, -0.11]
+split_r8         threshold 0.95 seeds ['el_42', '20042'] | ul_flu/ul_rand 24 vs 30 of 32 (1:7) p=0.0703 diff=-0.19 Newcombe [-0.36, -0.01] exact-cond [-0.25, +0.01] | ul_flu_sam/ul_rand_sam 20 vs 29 of 32 (1:10) p=0.0117 diff=-0.28 Newcombe [-0.46, -0.08] exact-cond [-0.34, -0.06]
+split_r8         threshold 0.97 seeds ['el_42', '20042'] | ul_flu/ul_rand 24 vs 30 of 32 (1:7) p=0.0703 diff=-0.19 Newcombe [-0.36, -0.01] exact-cond [-0.25, +0.01] | ul_flu_sam/ul_rand_sam 20 vs 29 of 32 (1:10) p=0.0117 diff=-0.28 Newcombe [-0.46, -0.08] exact-cond [-0.34, -0.06]
+split_r512_a16   threshold 0.90 seeds ['el_42', '10042', '20042'] | ul_flu/ul_rand 31 vs 42 of 48 (3:14) p=0.0127 diff=-0.23 Newcombe [-0.38, -0.06] exact-cond [-0.33, -0.05] | ul_flu_sam/ul_rand_sam 25 vs 41 of 48 (3:19) p=0.000855 diff=-0.33 Newcombe [-0.49, -0.15] exact-cond [-0.43, -0.14]
+split_r512_a16   threshold 0.93 seeds ['el_42', '10042', '20042'] | ul_flu/ul_rand 31 vs 42 of 48 (3:14) p=0.0127 diff=-0.23 Newcombe [-0.38, -0.06] exact-cond [-0.33, -0.05] | ul_flu_sam/ul_rand_sam 25 vs 41 of 48 (3:19) p=0.000855 diff=-0.33 Newcombe [-0.49, -0.15] exact-cond [-0.43, -0.14]
+split_r512_a16   threshold 0.95 seeds ['el_42', '20042'] | ul_flu/ul_rand 21 vs 28 of 32 (2:9) p=0.0654 diff=-0.22 Newcombe [-0.41, -0.01] exact-cond [-0.33, +0.01] | ul_flu_sam/ul_rand_sam 19 vs 28 of 32 (2:11) p=0.0225 diff=-0.28 Newcombe [-0.47, -0.06] exact-cond [-0.39, -0.04]
+split_r512_a16   threshold 0.97 seeds ['el_42', '20042'] | ul_flu/ul_rand 21 vs 28 of 32 (2:9) p=0.0654 diff=-0.22 Newcombe [-0.41, -0.01] exact-cond [-0.33, +0.01] | ul_flu_sam/ul_rand_sam 19 vs 28 of 32 (2:11) p=0.0225 diff=-0.28 Newcombe [-0.47, -0.06] exact-cond [-0.39, -0.04]
+heldout_r512_a16 threshold 0.90 seeds ['el_42'] | ul_flu/ul_rand 6 vs 16 of 16 (0:10) p=0.00195 diff=-0.62 Newcombe [-0.82, -0.32] exact-cond [-0.62, -0.24] | ul_flu_sam/ul_rand_sam 3 vs 16 of 16 (0:13) p=0.000244 diff=-0.81 Newcombe [-0.93, -0.50] exact-cond [-0.81, -0.41]
+heldout_r512_a16 threshold 0.93 seeds ['el_42'] | ul_flu/ul_rand 6 vs 16 of 16 (0:10) p=0.00195 diff=-0.62 Newcombe [-0.82, -0.32] exact-cond [-0.62, -0.24] | ul_flu_sam/ul_rand_sam 3 vs 16 of 16 (0:13) p=0.000244 diff=-0.81 Newcombe [-0.93, -0.50] exact-cond [-0.81, -0.41]
+heldout_r512_a16 threshold 0.95 seeds ['el_42'] | ul_flu/ul_rand 6 vs 16 of 16 (0:10) p=0.00195 diff=-0.62 Newcombe [-0.82, -0.32] exact-cond [-0.62, -0.24] | ul_flu_sam/ul_rand_sam 3 vs 16 of 16 (0:13) p=0.000244 diff=-0.81 Newcombe [-0.93, -0.50] exact-cond [-0.81, -0.41]
+heldout_r512_a16 threshold 0.97 seeds ['el_42'] | ul_flu/ul_rand 6 vs 16 of 16 (0:10) p=0.00195 diff=-0.62 Newcombe [-0.82, -0.32] exact-cond [-0.62, -0.24] | ul_flu_sam/ul_rand_sam 3 vs 16 of 16 (0:13) p=0.000244 diff=-0.81 Newcombe [-0.93, -0.50] exact-cond [-0.81, -0.41]
+
+== 4. Pre-attack depth at equal forgetting: mean true-sport log-odds, step reached
+run          s16_relabel_10042  s16_relabel_20042  s16_relabel_42  s64_relabel_42
+arm                                                                              
+ul                       -12.3               -8.8            -7.3           -16.7
+ul_flu                    -9.0               -7.6           -12.2            -7.9
+ul_flu_sam                -6.8               -7.9            -9.1            -7.3
+ul_rand                   -5.0              -10.0            -5.7            -7.4
+ul_rand_sam               -4.2               -6.2            -4.2            -6.7
+ul_sam                    -8.1               -6.0            -8.3            -6.3
+run          s16_relabel_10042  s16_relabel_20042  s16_relabel_42  s64_relabel_42
+arm                                                                              
+ul                        30.0               30.0            20.0           130.0
+ul_flu                    30.0               70.0            30.0           230.0
+ul_flu_sam                40.0               60.0            70.0           150.0
+ul_rand                   90.0               40.0            80.0           240.0
+ul_rand_sam              100.0               60.0            80.0           190.0
+ul_sam                    50.0               50.0            50.0           190.0

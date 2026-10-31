@@ -1,0 +1,95 @@
+model: meta-llama/Meta-Llama-3-8B
+revision: 8cde5ca8380496c9a6cc7ef3a8b46a0372a1d920
+device: cuda
+dtype: bfloat16
+seed: 20042
+dataset: data/sports_original.csv
+output: results/sports16_relabel_seed20042
+# Training and attack batch. eval_batch_size is forward-only evaluation, which is
+# run at every attack step; it does not change any number, only the speed.
+batch_size: 4
+eval_batch_size: 64
+max_length: 128
+strict_identity: false
+splits:
+  forget: 16
+  retain: 256
+  forget_heldout: 256
+  minimum_probability: 0.5
+flu:
+  selection: all_layers
+  gain_threshold: 0.016
+  localization_budget_fraction: 0.25
+train:
+  # relabel: p(true)->0 and one random wrong sport ->1.
+  # npo: -(2/beta) log sigmoid(-beta log(p/p_ref)), p_ref from the base model.
+  forget_objective: relabel
+  # Upper bound. Training stops early once all three levels are saved.
+  steps: 300
+  learning_rate: 0.01
+  forget_weight: 1.5
+  retain_weight: 1.0
+  # 16 = every forget fact every step.
+  forget_batch_size: 16
+  retain_batch_size: 16
+  sam_rho_forget: 0.01
+  sam_rho_retain: 0.01
+  max_grad_norm: 1.0
+  checkpoint_every: 25
+  select_batch_size: 64
+  # The three unlearning levels, all taken from one training run per arm.
+  levels:
+    check_every: 10
+    # 1. Same number of steps.
+    steps: 100
+    # 2. Full-set forget loss below this. Relabel loss is -log P(planted wrong sport),
+    #    so 0.05 means P(planted) > 0.95.
+    loss: 0.05
+    # 3. Same forgetting: 0 facts correct and every fact's normalized true-sport
+    #    probability below this (the forgetting gate used before).
+    forget_probability: 0.05
+# Named attacks. Each runs on every arm at every level, in relearning/<name>/.
+# LoRA rank 512 on all seven projections is ~1.34B trainable parameters (~17% of
+# the 8B model). alpha 16, the same alpha as the working r8/a16 attack. Under Adam each
+# LoRA B entry moves about lr per step whatever the gradient size, and the r rank
+# components add up coherently, so the change in W per step grows with alpha, not
+# with alpha/rank or alpha/sqrt(rank). Equal alpha = equal step size as r8 (Hu et
+# al. likewise keep alpha fixed across ranks). Base-model pilots: alpha 1024
+# diverged in 2-3 steps (loss 0.08 -> 34); alpha 128 collapsed by step 10 (every
+# forget and retain fact answered "football"). New attack names each time, so
+# folders from the failed settings are never reused.
+# learning_rate: 3e-4, same as the last run.
+relearn:
+  # A. Half the forget facts train, the other half are scored; then swapped, so
+  #    every fact is scored once, only by the attack that never saw it.
+  split_r512_a16:
+    data: forget_split
+    folds: 2
+    targets: all
+    rank: 512
+    alpha: 16
+    learning_rate: 0.0003
+    steps: 100
+    evaluate_every: 10
+    checkpoint_every: 25
+  # B. Train on the held-out facts, score the full forget set.
+  heldout_r512_a16:
+    data: forget_heldout
+    targets: all
+    rank: 512
+    alpha: 16
+    learning_rate: 0.0003
+    steps: 100
+    evaluate_every: 10
+    checkpoint_every: 25
+  # Check: attack A at rank 8.
+  split_r8:
+    data: forget_split
+    folds: 2
+    targets: all
+    rank: 8
+    alpha: 16
+    learning_rate: 0.0003
+    steps: 100
+    evaluate_every: 10
+    checkpoint_every: 25
